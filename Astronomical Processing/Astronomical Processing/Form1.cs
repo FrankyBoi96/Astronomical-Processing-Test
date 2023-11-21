@@ -30,6 +30,7 @@ namespace Astronomical_Processing
             InitializeComponent();
         }
 
+        #region Methods 
         private void ArraySort()
         {
             int temp;
@@ -67,9 +68,14 @@ namespace Astronomical_Processing
 
         }
 
+
+
+
+        #endregion
         private void BtnSort_Click(object sender, EventArgs e)
         {
             ArraySort();
+            DisplayArray();
         }
 
         private void BtnEdit_Click(object sender, EventArgs e)
