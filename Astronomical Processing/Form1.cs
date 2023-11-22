@@ -74,8 +74,14 @@ namespace Astronomical_Processing
 
         //make Delete method
 
-        //make Randon Num Gene method
-
+        private void RandomNumGene()
+        {
+            lstBox.Items.Clear();
+            for(int i = 0; i < astro.Length; i++)
+            {
+                astro[i] = rand.Next(1, 100);
+            }
+        }
 
 
         #endregion
@@ -93,8 +99,8 @@ namespace Astronomical_Processing
 
         private void BtnGenerate_Click(object sender, EventArgs e)
         {
-            //call Random Num gene method
-            //call display
+            RandomNumGene();
+            DisplayArray();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
