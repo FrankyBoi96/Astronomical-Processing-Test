@@ -68,6 +68,13 @@ namespace Astronomical_Processing
 
         }
 
+        //make Search method
+
+        //make Edit method
+
+        //make Delete method
+
+        //make Randon Num Gene method
 
 
 
@@ -80,22 +87,26 @@ namespace Astronomical_Processing
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-
+            //Call edit method
+            //call display
         }
 
         private void BtnGenerate_Click(object sender, EventArgs e)
         {
-
+            //call Random Num gene method
+            //call display
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-
+            //call Delete method
+            //call display
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-
+            //call Search method
+            //call display
         }
     }
 }
