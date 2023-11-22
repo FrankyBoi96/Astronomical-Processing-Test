@@ -1,3 +1,4 @@
+﻿using System;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
@@ -20,7 +21,7 @@ namespace Astronomical_Processing
     {
         #region Global Variables
         const int arraySize = 24;
-        int astro = new int(arraySize);
+        int[] astro = new int[arraySize];
         Random rand = new Random();
         int currentIndex = 0;
         #endregion
@@ -29,38 +30,83 @@ namespace Astronomical_Processing
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        #region Methods 
+        private void ArraySort()
         {
-            // Set up form properties
-            this.Text = "Astronomical Processing";
+            int temp;
+            for (int i = 0; i < arraySize - 1; i++)
+            {
+                for (int j = 0; j < arraySize - 1; j++)
+                {
+                    if (astro[j] > astro[j + 1])
+                    {
+                        temp = astro[j];
+                        astro[j] = astro[j + 1];
+                        astro[j + 1] = temp;
 
-            // Initialize UI components
-            BtnSort = CreateButton("Sort", Sort_Click);
-            BtnSearch = CreateButton("Search", Search_Click);
-            BtnEdit = CreateButton("Edit", Edit_Click);
-            BtnGenerate = Create Button("Generate", Generate_Click);
-            BtnDelete =
-            txtSearch = new TextBox();
-            txtEdit = new TextBox();
+                    }
+                }
 
-            listBox = new ListBox();
-
-            // Set up layout
-            FlowLayoutPanel panel = new FlowLayoutPanel();
-            panel.Controls.AddRange(new Control[] { BtnSort, BtnSearch, btnEdit, btnUpdate, btnMenu, btnRefresh, btnHelp, btnGenerate, txtSearch, txtEdit, listBox });
-
-            // Add panel to the form
-            this.Controls.Add(panel);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
+            }
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void DisplayArray()
         {
+           
+            lstBox.Items.Clear();
+            for (int i = 0; i < arraySize; i++)
+            {
 
+                if (lstBox.Items.Contains(0))
+                {
+                    lstBox.Items.Remove(0);
+                }
+                lstBox.Items.Add(astro[i]);
+            }
+            
+
+        }
+
+        //make Search method
+
+        //make Edit method
+
+        //make Delete method
+
+        //make Randon Num Gene method
+
+
+
+        #endregion
+        private void BtnSort_Click(object sender, EventArgs e)
+        {
+            ArraySort();
+            DisplayArray();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            //Call edit method
+            //call display
+        }
+
+        private void BtnGenerate_Click(object sender, EventArgs e)
+        {
+            //call Random Num gene method
+            //call display
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            //call Delete method
+            //call display
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            //call Search method
+            //call display
         }
     }
 }

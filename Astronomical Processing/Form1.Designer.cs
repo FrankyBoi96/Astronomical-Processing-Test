@@ -3,12 +3,12 @@
     partial class Form1
     {
         /// <summary>
-        ///  Required designer variable.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        ///  Clean up any resources being used.
+        /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
@@ -23,144 +23,113 @@
         #region Windows Form Designer generated code
 
         /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            TxtSearch = new TextBox();
-            ListBox1 = new ListBox();
-            menuStrip1 = new MenuStrip();
-            statusStrip1 = new StatusStrip();
-            BtnSearch = new Button();
-            BtnSort = new Button();
-            BtnEdit = new Button();
-            BtnGenerate = new Button();
-            BtnDelete = new Button();
-            SuspendLayout();
+            this.lstBox = new System.Windows.Forms.ListBox();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.txtBox = new System.Windows.Forms.TextBox();
+            this.BtnSort = new System.Windows.Forms.Button();
+            this.BtnEdit = new System.Windows.Forms.Button();
+            this.BtnDelete = new System.Windows.Forms.Button();
+            this.BtnGenerate = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
-            // TxtSearch
+            // lstBox
             // 
-            TxtSearch.Location = new Point(23, 333);
-            TxtSearch.Margin = new Padding(2, 1, 2, 1);
-            TxtSearch.Name = "TxtSearch";
-            TxtSearch.Size = new Size(212, 23);
-            TxtSearch.TabIndex = 0;
-            TxtSearch.TextChanged += textBox1_TextChanged;
-            // 
-            // ListBox1
-            // 
-            ListBox1.FormattingEnabled = true;
-            ListBox1.ItemHeight = 15;
-            ListBox1.Location = new Point(23, 25);
-            ListBox1.Margin = new Padding(2, 1, 2, 1);
-            ListBox1.Name = "ListBox1";
-            ListBox1.Size = new Size(212, 304);
-            ListBox1.TabIndex = 1;
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.ImageScalingSize = new Size(32, 32);
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(3, 1, 0, 1);
-            menuStrip1.Size = new Size(691, 24);
-            menuStrip1.TabIndex = 2;
-            menuStrip1.Text = "menuStrip1";
-            // 
-            // statusStrip1
-            // 
-            statusStrip1.ImageScalingSize = new Size(32, 32);
-            statusStrip1.Location = new Point(0, 444);
-            statusStrip1.Name = "statusStrip1";
-            statusStrip1.Padding = new Padding(1, 0, 8, 0);
-            statusStrip1.Size = new Size(691, 22);
-            statusStrip1.TabIndex = 3;
-            statusStrip1.Text = "statusStrip1";
+            this.lstBox.FormattingEnabled = true;
+            this.lstBox.Location = new System.Drawing.Point(50, 15);
+            this.lstBox.Name = "lstBox";
+            this.lstBox.Size = new System.Drawing.Size(268, 355);
+            this.lstBox.TabIndex = 0;
             // 
             // BtnSearch
             // 
-            BtnSearch.Location = new Point(23, 358);
-            BtnSearch.Margin = new Padding(2, 1, 2, 1);
-            BtnSearch.Name = "BtnSearch";
-            BtnSearch.Size = new Size(212, 72);
-            BtnSearch.TabIndex = 4;
-            BtnSearch.Text = "Search Button";
-            BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Location = new System.Drawing.Point(50, 405);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(268, 90);
+            this.BtnSearch.TabIndex = 1;
+            this.BtnSearch.Text = "Search Button";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // txtBox
+            // 
+            this.txtBox.Location = new System.Drawing.Point(50, 379);
+            this.txtBox.Name = "txtBox";
+            this.txtBox.Size = new System.Drawing.Size(268, 20);
+            this.txtBox.TabIndex = 2;
             // 
             // BtnSort
             // 
-            BtnSort.Location = new Point(239, 25);
-            BtnSort.Margin = new Padding(2, 1, 2, 1);
-            BtnSort.Name = "BtnSort";
-            BtnSort.Size = new Size(212, 72);
-            BtnSort.TabIndex = 5;
-            BtnSort.Text = "Sort Button";
-            BtnSort.UseVisualStyleBackColor = true;
+            this.BtnSort.Location = new System.Drawing.Point(324, 15);
+            this.BtnSort.Name = "BtnSort";
+            this.BtnSort.Size = new System.Drawing.Size(268, 90);
+            this.BtnSort.TabIndex = 3;
+            this.BtnSort.Text = "Sort Button";
+            this.BtnSort.UseVisualStyleBackColor = true;
+            this.BtnSort.Click += new System.EventHandler(this.BtnSort_Click);
             // 
             // BtnEdit
             // 
-            BtnEdit.Location = new Point(239, 99);
-            BtnEdit.Margin = new Padding(2, 1, 2, 1);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(212, 72);
-            BtnEdit.TabIndex = 6;
-            BtnEdit.Text = "Edit Button";
-            BtnEdit.UseVisualStyleBackColor = true;
-            // 
-            // BtnGenerate
-            // 
-            BtnGenerate.Location = new Point(239, 173);
-            BtnGenerate.Margin = new Padding(2, 1, 2, 1);
-            BtnGenerate.Name = "BtnGenerate";
-            BtnGenerate.Size = new Size(212, 72);
-            BtnGenerate.TabIndex = 7;
-            BtnGenerate.Text = "Generate Random numbers";
-            BtnGenerate.UseVisualStyleBackColor = true;
+            this.BtnEdit.Location = new System.Drawing.Point(324, 111);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(268, 90);
+            this.BtnEdit.TabIndex = 4;
+            this.BtnEdit.Text = "Edit Button";
+            this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // BtnDelete
             // 
-            BtnDelete.Location = new Point(239, 247);
-            BtnDelete.Margin = new Padding(2, 1, 2, 1);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(212, 72);
-            BtnDelete.TabIndex = 8;
-            BtnDelete.Text = "Delete Button ";
-            BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Location = new System.Drawing.Point(324, 303);
+            this.BtnDelete.Name = "BtnDelete";
+            this.BtnDelete.Size = new System.Drawing.Size(268, 90);
+            this.BtnDelete.TabIndex = 6;
+            this.BtnDelete.Text = "Delete Button";
+            this.BtnDelete.UseVisualStyleBackColor = true;
+            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // BtnGenerate
+            // 
+            this.BtnGenerate.Location = new System.Drawing.Point(324, 207);
+            this.BtnGenerate.Name = "BtnGenerate";
+            this.BtnGenerate.Size = new System.Drawing.Size(268, 90);
+            this.BtnGenerate.TabIndex = 5;
+            this.BtnGenerate.Text = "Generate Random Numbers";
+            this.BtnGenerate.UseVisualStyleBackColor = true;
+            this.BtnGenerate.Click += new System.EventHandler(this.BtnGenerate_Click);
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(691, 466);
-            Controls.Add(BtnDelete);
-            Controls.Add(BtnGenerate);
-            Controls.Add(BtnEdit);
-            Controls.Add(BtnSort);
-            Controls.Add(BtnSearch);
-            Controls.Add(statusStrip1);
-            Controls.Add(ListBox1);
-            Controls.Add(TxtSearch);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
-            Margin = new Padding(2, 1, 2, 1);
-            Name = "Form1";
-            Text = "Form1";
-            Load += Form1_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.BtnDelete);
+            this.Controls.Add(this.BtnGenerate);
+            this.Controls.Add(this.BtnEdit);
+            this.Controls.Add(this.BtnSort);
+            this.Controls.Add(this.txtBox);
+            this.Controls.Add(this.BtnSearch);
+            this.Controls.Add(this.lstBox);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private TextBox TxtSearch;
-        private ListBox ListBox1;
-        private MenuStrip menuStrip1;
-        private StatusStrip statusStrip1;
-        private Button BtnSearch;
-        private Button BtnSort;
-        private Button BtnEdit;
-        private Button BtnGenerate;
-        private Button BtnDelete;
+        private System.Windows.Forms.ListBox lstBox;
+        private System.Windows.Forms.Button BtnSearch;
+        private System.Windows.Forms.TextBox txtBox;
+        private System.Windows.Forms.Button BtnSort;
+        private System.Windows.Forms.Button BtnEdit;
+        private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.Button BtnGenerate;
     }
 }
+
