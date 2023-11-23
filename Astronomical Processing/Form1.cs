@@ -13,7 +13,6 @@ namespace Astronomical_Processing
     // Version: 1
 
     // Astronomical Processing application.
-    // Astronomical Processing application
 
     // Brief explanation of the program and list, 
 
@@ -55,7 +54,7 @@ namespace Astronomical_Processing
 
         private void DisplayArray()
         {
-           
+
             lstBox.Items.Clear();
             for (int i = 0; i < arraySize; i++)
             {
@@ -66,7 +65,35 @@ namespace Astronomical_Processing
                 }
                 lstBox.Items.Add(astro[i]);
             }
-            
+
+
+        }
+
+        private void CheckSort()
+        {
+            if (string.IsNullOrEmpty(txtBox.Text))
+            {
+                MessageBox.Show("Pick a Number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lstBox.ClearSelected();
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Have you sorted the Array", "Index", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    BinarySearch();
+                    txtBox.Clear();
+                    lstBox.ClearSelected();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    MessageBox.Show("Sorting Array");
+                    ArraySort();
+                    DisplayArray();
+                }
+
+
+            }
 
         }
 
@@ -78,45 +105,52 @@ namespace Astronomical_Processing
             int high = arraySize;
             int target = int.Parse(txtBox.Text);
             int index;
-            bool found = false; 
-
-            while(!found && low <= high)
+            bool found = false;
+            try
             {
-                mid = (low + high) / 2;
+                while (!found && low <= high)
+                {
+                    mid = (low + high) / 2;
 
-                if (astro[mid] == target)
-                {
-                    found = true;
-                    index = mid;
-                    lstBox.SetSelected(index,true);
-                    MessageBox.Show("Value found at: " + index, "Index", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                    if (astro[mid] == target)
+                    {
+                        found = true;
+                        index = mid;
+                        lstBox.SetSelected(index, true);
+                        index++;
+                        MessageBox.Show("Value found at: " + index, "Index", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else if (astro[mid] > target)
+                    {
+                        high = mid - 1;
+                    }
+                    else
+                    {
+                        low = mid + 1;
+                    }
                 }
-                else if (astro[mid] >= target)
+
+                if (!astro.Contains(int.Parse(txtBox.Text)))
                 {
-                    high = mid - 1; 
-                }
-                else
-                {
-                    low = mid + 1; 
+                    MessageBox.Show("Not Found", "Index", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            if (!astro.Contains(int.Parse(txtBox.Text)))
+            catch (Exception e)
             {
-                MessageBox.Show("Not Found", "Index", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                MessageBox.Show("Error");
             }
+
+
         }
 
-        //make Edit method
 
-        //make Delete method
 
         private void RandomNumGene()
         {
             lstBox.Items.Clear();
-            for(int i = 0; i < arraySize; i++)
+            for (int i = 0; i < arraySize; i++)
             {
-                astro[i] = rand.Next(1, 100);
+                astro[i] = rand.Next(10, 99);
             }
         }
 
@@ -130,8 +164,25 @@ namespace Astronomical_Processing
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            //Call edit method
-            //call display
+            if (string.IsNullOrEmpty(txtBox.Text))
+            {
+                MessageBox.Show("No Data in Text Box", "Empty Text Box", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lstBox.ClearSelected();
+            }
+            else if (lstBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select a Number", "Select Number", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lstBox.ClearSelected();
+            }
+            else
+            {
+                astro[lstBox.SelectedIndex] = int.Parse(txtBox.Text);
+                ArraySort();
+                DisplayArray();
+                txtBox.Clear();
+                lstBox.ClearSelected();
+            }
+
         }
 
         private void BtnGenerate_Click(object sender, EventArgs e)
@@ -140,31 +191,19 @@ namespace Astronomical_Processing
             DisplayArray();
         }
 
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            //call Delete method
-            //call display
-        }
-
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtBox.Text))
-            {
-                MessageBox.Show("Pick a Value", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                lstBox.ClearSelected();
-            }
-            else
-            {
-                BinarySearch();
-            }
-            txtBox.Clear();
-            lstBox.ClearSelected();
-
+            CheckSort();
         }
 
         private void lstBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void lstBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtBox.Text = astro[lstBox.SelectedIndex].ToString();
         }
     }
 }

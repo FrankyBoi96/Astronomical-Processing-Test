@@ -33,7 +33,6 @@
             this.txtBox = new System.Windows.Forms.TextBox();
             this.BtnSort = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
-            this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnGenerate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -42,13 +41,14 @@
             this.lstBox.FormattingEnabled = true;
             this.lstBox.Location = new System.Drawing.Point(50, 15);
             this.lstBox.Name = "lstBox";
-            this.lstBox.Size = new System.Drawing.Size(268, 355);
+            this.lstBox.Size = new System.Drawing.Size(268, 342);
             this.lstBox.TabIndex = 0;
             this.lstBox.SelectedIndexChanged += new System.EventHandler(this.lstBox_SelectedIndexChanged);
+            this.lstBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lstBox_MouseDown);
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(50, 405);
+            this.BtnSearch.Location = new System.Drawing.Point(50, 389);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(268, 90);
             this.BtnSearch.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             // txtBox
             // 
-            this.txtBox.Location = new System.Drawing.Point(50, 379);
+            this.txtBox.Location = new System.Drawing.Point(50, 363);
             this.txtBox.Name = "txtBox";
             this.txtBox.Size = new System.Drawing.Size(268, 20);
             this.txtBox.TabIndex = 2;
@@ -75,7 +75,7 @@
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(324, 111);
+            this.BtnEdit.Location = new System.Drawing.Point(324, 141);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(268, 90);
             this.BtnEdit.TabIndex = 4;
@@ -83,19 +83,9 @@
             this.BtnEdit.UseVisualStyleBackColor = true;
             this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
-            // BtnDelete
-            // 
-            this.BtnDelete.Location = new System.Drawing.Point(324, 303);
-            this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(268, 90);
-            this.BtnDelete.TabIndex = 6;
-            this.BtnDelete.Text = "Delete Button";
-            this.BtnDelete.UseVisualStyleBackColor = true;
-            this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
             // BtnGenerate
             // 
-            this.BtnGenerate.Location = new System.Drawing.Point(324, 207);
+            this.BtnGenerate.Location = new System.Drawing.Point(324, 267);
             this.BtnGenerate.Name = "BtnGenerate";
             this.BtnGenerate.Size = new System.Drawing.Size(268, 90);
             this.BtnGenerate.TabIndex = 5;
@@ -108,7 +98,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
-            this.Controls.Add(this.BtnDelete);
             this.Controls.Add(this.BtnGenerate);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnSort);
@@ -129,7 +118,6 @@
         private System.Windows.Forms.TextBox txtBox;
         private System.Windows.Forms.Button BtnSort;
         private System.Windows.Forms.Button BtnEdit;
-        private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.Button BtnGenerate;
     }
 }
