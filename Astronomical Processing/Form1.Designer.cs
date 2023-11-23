@@ -44,6 +44,7 @@
             this.lstBox.Name = "lstBox";
             this.lstBox.Size = new System.Drawing.Size(268, 355);
             this.lstBox.TabIndex = 0;
+            this.lstBox.SelectedIndexChanged += new System.EventHandler(this.lstBox_SelectedIndexChanged);
             // 
             // BtnSearch
             // 

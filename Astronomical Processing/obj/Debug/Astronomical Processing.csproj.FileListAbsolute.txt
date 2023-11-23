@@ -9,3 +9,14 @@ D:\Downloads\Astronomical_Processing\Astronomical Processing\Astronomical Proces
 D:\Downloads\Astronomical_Processing\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical Processing.csproj.CoreCompileInputs.cache
 D:\Downloads\Astronomical_Processing\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical Processing.exe
 D:\Downloads\Astronomical_Processing\Astronomical Processing\Astronomical Processing\obj\Debug\Astronomical Processing.pdb
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\bin\Debug\Astronomical Processing.exe.config
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\bin\Debug\Astronomical Processing.exe
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\bin\Debug\Astronomical Processing.pdb
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\obj\Debug\Astronomical Processing.csproj.AssemblyReference.cache
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\obj\Debug\Astronomical Processing.csproj.SuggestedBindingRedirects.cache
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\obj\Debug\Astronomical_Processing.Form1.resources
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\obj\Debug\Astronomical_Processing.Properties.Resources.resources
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\obj\Debug\Astronomical Processing.csproj.GenerateResource.cache
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\obj\Debug\Astronomical Processing.csproj.CoreCompileInputs.cache
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\obj\Debug\Astronomical Processing.exe
+C:\Users\Soare\Downloads\Astronomical-Processing-master\Astronomical Processing\obj\Debug\Astronomical Processing.pdb

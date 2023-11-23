@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Astronomical_Processing
@@ -69,6 +71,41 @@ namespace Astronomical_Processing
         }
 
         //make Search method
+        private void BinarySearch()
+        {
+            int mid;
+            int low = 0;
+            int high = arraySize;
+            int target = int.Parse(txtBox.Text);
+            int index;
+            bool found = false; 
+
+            while(!found && low <= high)
+            {
+                mid = (low + high) / 2;
+
+                if (astro[mid] == target)
+                {
+                    found = true;
+                    index = mid;
+                    lstBox.SetSelected(index,true);
+                    MessageBox.Show("Value found at: " + index, "Index", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+                }
+                else if (astro[mid] >= target)
+                {
+                    high = mid - 1; 
+                }
+                else
+                {
+                    low = mid + 1; 
+                }
+            }
+
+            if (!astro.Contains(int.Parse(txtBox.Text)))
+            {
+                MessageBox.Show("Not Found", "Index", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
+        }
 
         //make Edit method
 
@@ -77,7 +114,7 @@ namespace Astronomical_Processing
         private void RandomNumGene()
         {
             lstBox.Items.Clear();
-            for(int i = 0; i < astro.Length; i++)
+            for(int i = 0; i < arraySize; i++)
             {
                 astro[i] = rand.Next(1, 100);
             }
@@ -111,8 +148,23 @@ namespace Astronomical_Processing
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            //call Search method
-            //call display
+            if (string.IsNullOrEmpty(txtBox.Text))
+            {
+                MessageBox.Show("Pick a Value", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lstBox.ClearSelected();
+            }
+            else
+            {
+                BinarySearch();
+            }
+            txtBox.Clear();
+            lstBox.ClearSelected();
+
+        }
+
+        private void lstBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
